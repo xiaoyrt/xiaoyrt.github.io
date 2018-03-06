@@ -1,0 +1,25 @@
+﻿<html>
+
+    <body>
+        <button onclick='file()'>创建一个文本文件</button>
+    </body>
+
+    <script type="text/javascript">
+        function file(){
+
+            var obf, fr;
+            try { 
+                obf=new File(["这是一行文本文档","这是二行文本文档"],"D:\github\xiaoyrt.github.io\test\myjstest.txt"); 
+            } catch (e) { 
+                alert("当前浏览器不支持");
+                return;
+            } 
+
+            alert("方法已执行2");
+            fr=new FileReader();
+            fr.onload=fr.readAsText(obf);
+            str=result
+            alert("里面的内容为'" + str + "'");
+        }
+    </script>
+<html>
